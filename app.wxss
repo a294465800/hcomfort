@@ -6,7 +6,7 @@ page {
 
 view {
   box-sizing: border-box;
-  font: normal 32rpx "微软雅黑";
+  font: normal 30rpx "微软雅黑";
 }
 
 .container {
