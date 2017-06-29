@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+  <!--logo标题-->
+  <view class="logo">
+    <image src="/images/logo.png" class="logo_img" mode="aspectFit"></image>
+    <view class="logo_title">海疗康，放心体检的第一选择</view>
+  </view>
+  <!--/logo标题-->
+
+  <!--表单-->
+  <form>
+    <view class="input">
+      <view class="input_type">中文姓名</view>
+      <input placeholder="输入中文姓名" />
+    </view>
+  </form>
+  <!--/表单-->
+</view>
