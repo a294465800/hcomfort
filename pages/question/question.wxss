@@ -1,0 +1,72 @@
+/* question.wxss */
+
+.logo_title {
+  color: #759ab4;
+}
+
+/*问题主题*/
+
+.question_item {
+  width: 100%;
+}
+
+.question_head, .question_part, .question_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.question_head {
+  justify-content: flex-start;
+  background-color: #154b79;
+  padding: 20rpx 30rpx 20rpx 10rpx;
+}
+
+.query_img {
+  background-color: #fff;
+  color: #1a477e;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  line-height: 50rpx;
+  text-align: center;
+  margin-right: 10rpx;
+}
+
+.question {
+  color: #fff;
+}
+
+.question_img {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.question_part {
+  flex: 1;
+  justify-content: space-between;
+}
+
+/*回答*/
+
+.question_content {
+  padding: 20rpx 30rpx 20rpx 10rpx;
+  color: #759ab4;
+}
+
+.answer_img {
+  background-color: #1a477e;
+  color: #fff;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  line-height: 50rpx;
+  text-align: center;
+  margin-right: 10rpx;
+  align-self: flex-start;
+}
+
+.answer_content {
+  flex: 1;
+  text-align: justify;
+}

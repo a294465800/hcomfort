@@ -1,0 +1,25 @@
+<!--question.wxml-->
+<view class="container">
+  <!--logo标题-->
+  <view class="logo">
+    <image src="/images/logo.png" class="logo_img" mode="aspectFit"></image>
+    <view class="logo_title">海疗康，放心体检的第一选择</view>
+  </view>
+  <!--/logo标题-->
+
+  <!--问题-->
+  <view class="question_item" wx:for="{{questions}}" wx:key="id">
+    <view class="question_head">
+      <view class="query_img">Q</view>
+      <view class="question_part">
+        <view class="question">{{item.question}}</view>
+        <image src="" class="question_img"></image>
+      </view>
+    </view>
+    <view class="question_content">
+      <view class="answer_img">A</view>
+      <view class="answer_content">{{item.answer}}</view>
+    </view>
+  </view>
+  <!--/问题-->
+</view>

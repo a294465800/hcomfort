@@ -9,27 +9,6 @@
   padding: 20rpx 0 40rpx;
 }
 
-/*logo*/
-
-.logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 40rpx;
-}
-
-.logo_img {
-  width: 80rpx;
-  height: 80rpx;
-  margin-right: 20rpx;
-}
-
-.logo_title {
-  color: #fff;
-  font-size: 34rpx;
-}
-
 /*表单*/
 
 .place_input {
