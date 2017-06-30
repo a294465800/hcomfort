@@ -13,12 +13,12 @@
       <view class="query_img">Q</view>
       <view class="question_part">
         <view class="question">{{item.question}}</view>
-        <image src="" class="question_img"></image>
+        <image src="/images/down.png" class="question_img"></image>
       </view>
     </view>
     <view class="question_content">
       <view class="answer_img">A</view>
-      <view class="answer_content">{{item.answer}}</view>
+      <text class="answer_content">{{item.answer}}</text>
     </view>
   </view>
   <!--/问题-->

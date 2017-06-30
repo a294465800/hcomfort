@@ -1,13 +1,12 @@
 {
   "pages": [
-    "pages/question/question",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/question/question"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "海疗康日本体验",
+    "navigationBarTitleText": "海疗康日本体检",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -17,12 +16,6 @@
         "text": "预约",
         "iconPath": "/images/order.png",
         "selectedIconPath": "/images/order_p.png"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "在线客服",
-        "iconPath": "/images/mine.png",
-        "selectedIconPath": "/images/mine_p.png"
       },
       {
         "pagePath": "pages/question/question",

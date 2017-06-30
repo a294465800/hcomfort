@@ -39,7 +39,7 @@
 
 .question_img {
   width: 40rpx;
-  height: 40rpx;
+  height: 18rpx;
 }
 
 .question_part {

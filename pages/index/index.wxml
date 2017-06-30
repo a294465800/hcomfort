@@ -15,7 +15,7 @@
     </view>
     <view class="input">
       <view class="input_type">姓名拼音</view>
-      <input placeholder="输入姓名拼音" placeholder-class="place_input" name="name_en" />
+      <input placeholder="输入姓名拼音" placeholder-class="place_input" type="" name="name_en" />
     </view>
     <view class="input">
       <view class="input_type">性别</view>
@@ -30,20 +30,18 @@
     </view>
     <view class="input">
       <view class="input_type">年龄</view>
-      <input placeholder="输入年龄" placeholder-class="place_input" name="age" />
+      <input placeholder="输入年龄" placeholder-class="place_input" type="number" name="age" />
     </view>
     <view class="input">
       <view class="input_type">手机号码</view>
-      <input placeholder="输入手机号码" placeholder-class="place_input" name="tel" />
+      <input placeholder="输入手机号码" placeholder-class="place_input" type="number" name="tel" />
     </view>
     <view class="input">
       <view class="input_type">意向城市</view>
       <input placeholder="输入意向城市" placeholder-class="place_input" name="city" />
     </view>
     <view class="input">
-      <view class="input_type">预算
-        <text></text>
-      </view>
+      <view class="input_type">预算</view>
       <input placeholder="输入预算" placeholder-class="place_input" name="budget" />
     </view>
     <view class="input">
@@ -74,6 +72,14 @@
   <!--/表单-->
 
   <!--二维码-->
-  <image src="" mode="scaleToFill" class="QRcode_img"></image>
+  <image src="/images/QRcode.png" mode="scaleToFill" class="QRcode_img"></image>
   <!--/二维码-->
+
+  <!--客服-->
+  <label class="contact {{flag?'opacity':''}}">
+    <button open-type="contact" hidden></button>
+    <!--<contact-button type="default-light" size="24"></contact-button>在线客服-->
+    <image src="/images/kefu.png" mode="aspectFit" class="contact_img"></image>
+  </label>
+  <!--/客服-->
 </view>

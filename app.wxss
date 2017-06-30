@@ -34,3 +34,7 @@ view {
   color: #fff;
   font-size: 34rpx;
 }
+
+.opacity{
+  opacity: .5;
+}

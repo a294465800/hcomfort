@@ -99,6 +99,7 @@ radio {
   padding-right: 20rpx;
   min-width: 160rpx;
   height: 50rpx;
+  line-height: 50rpx;
 }
 
 .checkbox {
@@ -142,8 +143,21 @@ checkbox-group {
 }
 
 .QRcode_img {
-  width: 400rpx;
-  height: 400rpx;
-  background-color: #fff;
+  width: 300rpx;
+  height: 300rpx;
   margin-top: 60rpx;
+}
+
+/*客服按钮*/
+
+.contact {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.contact_img {
+  width: 80rpx;
+  height: 80rpx;
 }

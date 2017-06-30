@@ -1,9 +1,10 @@
 //index.js
 //获取应用实例
-var app = getApp()
+let app = getApp()
+let timer
 Page({
   data: {
-    userInfo: {},
+    flag: false,
     checkboxs: [
       {
         id: 0,
@@ -37,16 +38,8 @@ Page({
       }
     ]
   },
-  onLoad: function () {
-    console.log('onLoad')
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function (userInfo) {
-      //更新数据
-      that.setData({
-        userInfo: userInfo
-      })
-    })
+  onLoad() {
+    this.shrank()
   },
 
   //checkbox
@@ -57,6 +50,17 @@ Page({
     that.setData({
       [temp]: !that.data.checkboxs[index].checked
     })
+  },
+
+  //闪烁
+  shrank() {
+    clearInterval(timer)
+    const that = this
+    timer = setInterval(() => {
+      that.setData({
+        flag: !that.data.flag
+      })
+    }, 500)
   },
 
   //提交
