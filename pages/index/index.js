@@ -36,10 +36,40 @@ Page({
         en: 'zhongliu',
         checked: false
       }
-    ]
+    ],
+    budge: [
+      {
+        id: 0,
+        name: '<3万'
+      },
+      {
+        id: 1,
+        name: '<5万'
+      },
+      {
+        id: 2,
+        name: '<10万'
+      },
+      {
+        id: 3,
+        name: '>10万'
+      }
+    ],
+    index: 0,
+    name_zn: '',
+    name_en: '',
+    age: '',
+    tel: ''
   },
   onLoad() {
     this.shrank()
+  },
+
+  onShareAppMessage(res) {
+    return {
+      title: '海疗康日本体检',
+      path: '/pages/index/index'
+    }
   },
 
   //checkbox
@@ -63,8 +93,56 @@ Page({
     }, 500)
   },
 
+  budgePicker(e) {
+    let index = e.detail.value
+    this.setData({
+      index: index
+    })
+  },
+
   //提交
   postData(e) {
-    console.log(e.detail.value)
+    const that = this
+    let temp = e.detail.value
+    temp.budge = that.data.budge[that.data.index].name
+
+    for (let i in temp) {
+      if (temp[i] && (temp.focus.length > 0)) {
+        console.log(temp[i])
+        continue
+      }
+      else {
+        console.log(temp[i])
+        wx.showModal({
+          title: '提示',
+          content: '你还有信息没有填写哦~',
+          showCancel: false
+        })
+        return
+      }
+    }
+    wx.request({
+      url: 'https://www.sennki.com/api/add',
+      method: 'POST',
+      data: temp,
+      success: res => {
+        if (200 == res.data.code) {
+          wx.showToast({
+            title: '提交成功',
+            complete: () => {
+              wx.switchTab({
+                url: '/pages/question/question',
+              })
+            }
+          })
+          that.setData({
+            name_zn: '',
+            name_en: '',
+            age: '',
+            tel: ''
+          })
+        }
+      }
+    })
   }
 })
